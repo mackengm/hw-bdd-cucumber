@@ -24,7 +24,13 @@ Background: movies have been added to database
 
 Scenario: restrict to movies with 'PG' or 'R' ratings
   # enter step(s) to check the 'PG' and 'R' checkboxes
+    Given that I am on the RottenPotatoes home page
+    And the rating boxes are unchecked
+    Then the boxes for 'PG' and 'R' should change to the checked form
+    When I click once on each of them.
+
   # enter step(s) to uncheck all other checkboxes
+
   # enter step to "submit" the search form on the homepage
   # enter step(s) to ensure that PG and R movies are visible
   # enter step(s) to ensure that other movies are not visible
